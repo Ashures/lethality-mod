@@ -15,11 +15,15 @@ import net.minecraft.util.math.Vec3d;
 import net.minecraft.world.World;
 
 public class AssassinBladeItem extends SwordItem {
-    private int boostCooldown = 60;
+    private int cooldown;
 
-    public AssassinBladeItem(ToolMaterial toolMaterial, int attackDamage, float attackSpeed, int boostCooldown, Settings settings) {
+    public AssassinBladeItem(ToolMaterial toolMaterial, int attackDamage, float attackSpeed, int cooldown, Settings settings) {
         super(toolMaterial, attackDamage, attackSpeed, settings);
-        this.boostCooldown = boostCooldown;
+        this.cooldown = cooldown;
+    }
+
+    public int getCooldown() {
+        return cooldown;
     }
 
     @Override
@@ -29,7 +33,7 @@ public class AssassinBladeItem extends SwordItem {
         ItemStack itemStack = user.getStackInHand(hand);
 
         if (world.isClient() && !user.isFallFlying()) {
-            user.getItemCooldownManager().set(this, this.boostCooldown);
+            user.getItemCooldownManager().set(this, this.cooldown);
             Boost(user);
 
             return TypedActionResult.success(itemStack, true);
