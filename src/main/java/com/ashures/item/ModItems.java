@@ -6,15 +6,17 @@ import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroupEntries;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroups;
+import net.minecraft.item.SwordItem;
+import net.minecraft.item.ToolMaterials;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;
 
 public class ModItems {
-    public static final Item KATANA = registerItem("katana", new Item(new FabricItemSettings()));
+    public static final Item KATANA = registerItem("katana", new SwordItem(ToolMaterials.NETHERITE, 4, 2.0f, new FabricItemSettings()));
 
     // To add a different type of item (for example, Ingredient) create a new method for that new type.
-    private static void addItemsToToolItemGroup(FabricItemGroupEntries entries) {
+    private static void addItemsToCombatItemGroup(FabricItemGroupEntries entries) {
         entries.add(KATANA);
     }
 
@@ -25,6 +27,6 @@ public class ModItems {
     public static void registerModItems() {
         Lethality.LOGGER.info("Registering Mod Items for " + Lethality.MOD_ID);
 
-        ItemGroupEvents.modifyEntriesEvent(ItemGroups.TOOLS).register(ModItems::addItemsToToolItemGroup);
+        ItemGroupEvents.modifyEntriesEvent(ItemGroups.COMBAT).register(ModItems::addItemsToCombatItemGroup);
     }
 }
