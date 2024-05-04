@@ -11,9 +11,11 @@ import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;
 
 public class ModItems {
+    public static final Item KATANA = registerItem("katana", new Item(new FabricItemSettings()));
 
     // To add a different type of item (for example, Ingredient) create a new method for that new type.
     private static void addItemsToToolItemGroup(FabricItemGroupEntries entries) {
+        entries.add(KATANA);
     }
 
     private static Item registerItem(String name, Item item) {
