@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:smithing_transform",
+  "addition": {
+    "item": "nomorehorses:riftsteel_clump"
+  },
+  "base": {
+    "item": "minecraft:netherite_sword"
+  },
+  "result": {
+    "item": "lethality:katana"
+  },
+  "template": {
+    "item": "nomorehorses:riftsteel_upgrade_template"
+  }
+}
