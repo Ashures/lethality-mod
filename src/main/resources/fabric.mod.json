@@ -1,0 +1,40 @@
+{
+	"schemaVersion": 1,
+	"id": "lethality",
+	"version": "${version}",
+	"name": "Lethality",
+	"description": "For those who dabble in all things destructive, enjoy.",
+	"authors": [
+		"Me!"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "CC0-1.0",
+	"icon": "assets/lethality/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"com.ashures.Lethality"
+		],
+		"client": [
+			"com.ashures.LethalityClient"
+		],
+		"fabric-datagen": [
+			"com.ashures.LethalityDataGenerator"
+		]
+	},
+	"mixins": [
+		"lethality.mixins.json"
+	],
+	"depends": {
+		"fabricloader": ">=0.15.11",
+		"minecraft": "~1.20.2",
+		"java": ">=17",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}
