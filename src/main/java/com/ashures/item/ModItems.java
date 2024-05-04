@@ -15,7 +15,7 @@ import net.minecraft.util.Identifier;
 
 public class ModItems {
     public static final Item KATANA = registerItem("katana", new SwordItem(ToolMaterials.NETHERITE, 4, -2.0f, new FabricItemSettings()));
-    public static final Item ASSASSIN_BLADE = registerItem("assassin_blade", new AssassinBladeItem(ToolMaterials.NETHERITE, 4, -2.0f, 40, new FabricItemSettings()));
+    public static final Item ASSASSIN_BLADE = registerItem("assassin_blade", new AssassinBladeItem(ToolMaterials.NETHERITE, 4, -2.0f, 60, new FabricItemSettings()));
 
     // To add a different type of item (for example, Ingredient) create a new method for that new type.
     private static void addItemsToCombatItemGroup(FabricItemGroupEntries entries) {
