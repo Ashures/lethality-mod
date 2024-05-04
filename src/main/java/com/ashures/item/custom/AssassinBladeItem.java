@@ -47,8 +47,8 @@ public class AssassinBladeItem extends SwordItem {
         if (target.isDead()) {
             StatusEffectInstance entitySpeedEffect = attacker.getStatusEffect(StatusEffects.SPEED);
 
-            int speedAmplifier = entitySpeedEffect == null ? 1 : Math.min(2, entitySpeedEffect.getAmplifier() + 1);
-            attacker.addStatusEffect(new StatusEffectInstance(StatusEffects.SPEED, 100, speedAmplifier));
+            int speedAmplifier = entitySpeedEffect == null ? 0 : Math.min(1, entitySpeedEffect.getAmplifier() + 1);
+            attacker.setStatusEffect(new StatusEffectInstance(StatusEffects.SPEED, 100, speedAmplifier), null);
         }
 
         return super.postHit(stack, target, attacker);
