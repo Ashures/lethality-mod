@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "lethality:katana"
+    },
+    {
+      "item": "nomorehorses:boost_stone"
+    }
+  ],
+  "result": {
+    "item": "lethality:assassin_blade"
+  }
+}
