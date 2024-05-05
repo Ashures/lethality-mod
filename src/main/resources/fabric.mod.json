@@ -5,11 +5,11 @@
 	"name": "Lethality",
 	"description": "For those who dabble in all things destructive, enjoy.",
 	"authors": [
-		"Me!"
+		"Ashures"
 	],
 	"contact": {
-		"homepage": "https://fabricmc.net/",
-		"sources": "https://github.com/FabricMC/fabric-example-mod"
+		"homepage": "https://ashures.w3spaces.com",
+		"sources": "https://github.com/Ashures/lethality-mod"
 	},
 	"license": "CC0-1.0",
 	"icon": "assets/lethality/icon.png",
