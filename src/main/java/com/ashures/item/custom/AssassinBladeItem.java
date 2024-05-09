@@ -1,5 +1,7 @@
 package com.ashures.item.custom;
 
+import com.ashures.Lethality;
+import com.ashures.sound.ModSounds;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.MovementType;
 import net.minecraft.entity.effect.StatusEffectInstance;
@@ -8,6 +10,7 @@ import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.SwordItem;
 import net.minecraft.item.ToolMaterial;
+import net.minecraft.sound.SoundCategory;
 import net.minecraft.util.Hand;
 import net.minecraft.util.TypedActionResult;
 import net.minecraft.util.math.MathHelper;
@@ -31,15 +34,18 @@ public class AssassinBladeItem extends SwordItem {
         super.use(world, user, hand);
 
         ItemStack itemStack = user.getStackInHand(hand);
+        boolean boostSuccess = false;
 
         if (world.isClient() && !user.isFallFlying()) {
             user.getItemCooldownManager().set(this, this.cooldown);
-            Boost(user);
 
-            return TypedActionResult.success(itemStack, true);
+            Boost(user);
+            user.playSound(ModSounds.ASSASSIN_BLADE_DASH, SoundCategory.PLAYERS, 0.5F, 0.6F);
+
+            boostSuccess = true;
         }
 
-        return TypedActionResult.success(itemStack, false);
+        return TypedActionResult.success(itemStack, boostSuccess);
     }
 
     @Override

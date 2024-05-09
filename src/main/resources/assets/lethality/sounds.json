@@ -1,0 +1,8 @@
+{
+  "assassin_blade_dash": {
+    "subtitle": "subtitles.lethality.assassin_blade_dash",
+    "sounds": [
+      "lethality:assassin_blade_dash"
+    ]
+  }
+}

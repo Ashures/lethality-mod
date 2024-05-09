@@ -1,5 +1,5 @@
 {
-  "parent": "lethality:item/katana_renderer",
+  "parent": "lethality:item/handheld_katana",
   "textures": {
     "layer0": "lethality:item/assassin_blade"
   }

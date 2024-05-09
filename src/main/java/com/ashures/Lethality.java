@@ -1,6 +1,7 @@
 package com.ashures;
 
 import com.ashures.item.ModItems;
+import com.ashures.sound.ModSounds;
 import net.fabricmc.api.ModInitializer;
 
 import org.slf4j.Logger;
@@ -13,5 +14,6 @@ public class Lethality implements ModInitializer {
 	@Override
 	public void onInitialize() {
 		ModItems.registerModItems();
+		ModSounds.registerModSounds();
 	}
 }
