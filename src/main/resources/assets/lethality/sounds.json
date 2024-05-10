@@ -1,8 +1,14 @@
 {
   "assassin_blade_dash": {
-    "subtitle": "subtitles.lethality.assassin_blade_dash",
+    "subtitle": "Assassin's Blade Dash",
     "sounds": [
       "lethality:assassin_blade_dash"
+    ]
+  },
+  "assassin_blade_double_jump": {
+    "subtitle": "Assassin's Blade Double Jump",
+    "sounds": [
+      "lethality:assassin_blade_double_jump"
     ]
   }
 }

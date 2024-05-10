@@ -9,6 +9,7 @@ import net.minecraft.util.Identifier;
 
 public class ModSounds {
     public static final SoundEvent ASSASSIN_BLADE_DASH = registerSound("assassin_blade_dash");
+    public static final SoundEvent ASSASSIN_BLADE_DOUBLE_JUMP = registerSound("assassin_blade_double_jump");
 
     private static SoundEvent registerSound(String name) {
         Identifier id = new Identifier(Lethality.MOD_ID, name);
