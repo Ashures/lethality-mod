@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:smithing_transform",
+  "addition": {
+    "item": "nomorehorses:boost_stone"
+  },
+  "base": {
+    "item": "lethality:katana"
+  },
+  "result": {
+    "item": "lethality:assassin_blade"
+  },
+  "template": {
+    "item": "nomorehorses:jump_stone"
+  }
+}
