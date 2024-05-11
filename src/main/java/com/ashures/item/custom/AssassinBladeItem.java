@@ -1,6 +1,5 @@
 package com.ashures.item.custom;
 
-import com.ashures.Lethality;
 import com.ashures.sound.ModSounds;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.MovementType;
@@ -18,15 +17,11 @@ import net.minecraft.util.math.Vec3d;
 import net.minecraft.world.World;
 
 public class AssassinBladeItem extends SwordItem {
-    private int cooldown;
+    private final int cooldown;
 
     public AssassinBladeItem(ToolMaterial toolMaterial, int attackDamage, float attackSpeed, int cooldown, Settings settings) {
         super(toolMaterial, attackDamage, attackSpeed, settings);
         this.cooldown = cooldown;
-    }
-
-    public int getCooldown() {
-        return cooldown;
     }
 
     @Override
@@ -73,7 +68,7 @@ public class AssassinBladeItem extends SwordItem {
         playerEntity.useRiptide(20);
         if (playerEntity.isOnGround()) {
             float o = 1.1999999f;
-            playerEntity.move(MovementType.SELF, new Vec3d(0.0, 1.1999999284744263, 0.0));
+            playerEntity.move(MovementType.SELF, new Vec3d(0.0, o, 0.0));
         }
     }
 }
