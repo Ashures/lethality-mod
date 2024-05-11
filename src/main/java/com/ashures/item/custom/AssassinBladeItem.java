@@ -64,7 +64,7 @@ public class AssassinBladeItem extends SwordItem {
         float l = MathHelper.cos(f * ((float)Math.PI / 180)) * MathHelper.cos(g * ((float)Math.PI / 180));
         float m = MathHelper.sqrt(h * h + k * k + l * l);
         float n = 3.0f * ((1.0f + boostLevel) / 4.0f);
-        playerEntity.addVelocity(h *= n / m, 0, l *= n / m);
+        playerEntity.addVelocity(h * n / m, 0, l * n / m);
         playerEntity.useRiptide(20);
         if (playerEntity.isOnGround()) {
             float o = 1.1999999f;
