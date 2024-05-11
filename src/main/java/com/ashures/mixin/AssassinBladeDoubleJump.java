@@ -50,7 +50,7 @@ public abstract class AssassinBladeDoubleJump extends AbstractClientPlayerEntity
         }
 
         if (input.jumping && this.getMainHandStack().isOf(ModItems.ASSASSIN_BLADE) && !jumpedLastFrame && jumpCooldown == 0
-            && !this.isOnGround() && !this.getAbilities().flying && !this.isFallFlying() && !this.hasVehicle()
+                && !this.isOnGround() && !this.getAbilities().flying && !this.isFallFlying() && !this.hasVehicle() && !this.isCreative()
         ) {
             Vec3d curVelocity = this.getVelocity();
             this.setVelocity(curVelocity.x, getJumpVelocity() * 2.0F, curVelocity.z);

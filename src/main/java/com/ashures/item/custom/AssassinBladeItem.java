@@ -34,7 +34,6 @@ public class AssassinBladeItem extends SwordItem {
         super.use(world, user, hand);
 
         ItemStack itemStack = user.getStackInHand(hand);
-        boolean boostSuccess = false;
 
         if (world.isClient() && !user.isFallFlying()) {
             user.getItemCooldownManager().set(this, this.cooldown);
@@ -42,10 +41,10 @@ public class AssassinBladeItem extends SwordItem {
             Boost(user);
             user.playSound(ModSounds.ASSASSIN_BLADE_DASH, SoundCategory.PLAYERS, 0.5F, 0.6F);
 
-            boostSuccess = true;
+            return TypedActionResult.success(itemStack, true);
         }
 
-        return TypedActionResult.success(itemStack, boostSuccess);
+        return TypedActionResult.fail(itemStack);
     }
 
     @Override
