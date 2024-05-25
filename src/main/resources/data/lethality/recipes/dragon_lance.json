@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "#": {
+      "item": "minecraft:end_rod"
+    },
+    "O": {
+      "item": "lethality:dragonic_riftsteel"
+    }
+  },
+  "pattern": [
+    " OO",
+    " #O",
+    "#  "
+  ],
+  "result": {
+    "item": "lethality:dragon_lance"
+  },
+  "show_notification": true
+}
