@@ -1,5 +1,5 @@
 {
-  "parent": "item/handheld",
+  "parent": "lethality:item/handheld_lance",
   "textures": {
     "layer0": "lethality:item/dragon_lance"
   }
