@@ -14,6 +14,7 @@ import net.minecraft.util.Identifier;
 public class ModItems {
     public static final Item KATANA = registerItem("katana", new SwordItem(ToolMaterials.NETHERITE, 2, -2.0f, new FabricItemSettings()));
     public static final Item ASSASSIN_BLADE = registerItem("assassin_blade", new AssassinBladeItem(ToolMaterials.NETHERITE, 2, -2.0f, 40, new FabricItemSettings()));
+    public static final Item DRACONIC_RIFTSTEEL = registerItem("draconic_riftsteel", new Item(new FabricItemSettings()));
     public static final Item DRAGON_LANCE = registerItem("dragon_lance", new DragonLanceItem(ToolMaterials.NETHERITE, 10, -3.0f, 200, new FabricItemSettings()));
 
     // To add a different type of item (for example, Ingredient) create a new method for that new type.
@@ -21,6 +22,10 @@ public class ModItems {
         entries.add(KATANA);
         entries.add(ASSASSIN_BLADE);
         entries.add(DRAGON_LANCE);
+    }
+
+    private static void addItemsToIngredientsItemGroup(FabricItemGroupEntries entries) {
+        entries.add(DRACONIC_RIFTSTEEL);
     }
 
     private static Item registerItem(String name, Item item) {
@@ -31,5 +36,6 @@ public class ModItems {
         Lethality.LOGGER.info("Registering Mod Items for " + Lethality.MOD_ID);
 
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.COMBAT).register(ModItems::addItemsToCombatItemGroup);
+        ItemGroupEvents.modifyEntriesEvent(ItemGroups.INGREDIENTS).register(ModItems::addItemsToIngredientsItemGroup);
     }
 }
