@@ -29,17 +29,18 @@ public class DragonLanceItem extends SwordItem {
         if (!world.isClient()) {
             user.getItemCooldownManager().set(this, this.cooldown);
 
-            world.playSound(null, user.getBlockPos(), SoundEvents.ENTITY_ENDER_DRAGON_GROWL, SoundCategory.PLAYERS, 0.8f, 0.6f);
+            world.playSound(null, user.getBlockPos(), SoundEvents.ENTITY_ENDER_DRAGON_GROWL, SoundCategory.PLAYERS, 1.2f, 0.6f);
 
             LivingEntity target = user.getAttacker();
-            if (target != null) {
-                EndermanEntity enderman = new EndermanEntity(EntityType.ENDERMAN, world);
-                enderman.setHealth(1);
-                enderman.setAngryAt(target.getUuid());
 
-                for (int i = 0; i < 3; i++) {
-                    world.spawnEntity(enderman);
-                }
+            for (int i = 0; i < 3; i++) {
+                EndermanEntity enderman = new EndermanEntity(EntityType.ENDERMAN, world);
+                enderman.setPosition(user.getPos());
+                enderman.setHealth(1);
+                enderman.setTarget(target);
+                enderman.setSilent(true);
+
+                world.spawnEntity(enderman);
             }
         }
 
